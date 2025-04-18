@@ -1,4 +1,18 @@
 // Given an array of size n, sort the array using Merge Sort.
+
+/*
+Merge Sort is a divide and conquers algorithm, it divides the given array into equal parts and then merges the 2 sorted parts.
+
+There are 2 main functions :
+merge(): This function is used to merge the 2 halves of the array. It assumes that both parts of the array are sorted and merges both of them.
+mergeSort(): This function divides the array into 2 parts. low to mid and mid+1 to high where,
+    low = leftmost index of the array
+    high = rightmost index of the array
+    mid = Middle index of the array
+
+We recursively split the array, and go from top-down until all sub-arrays size becomes 1.
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -62,26 +76,26 @@ void mergeSort(vector<int> &arr, int low, int high)
 
 int main()
 {
-    int n;//size of array
+    int n; // size of array
     cout << "Enter the size of the array: ";
     cin >> n;
 
-    vector<int> arr;//array to store the numbers
+    vector<int> arr; // array to store the numbers
 
-    //Adding elements to the array
+    // Adding elements to the array
     cout << "Enter elements into the array : ";
-    for(int i=0;i<n;i++)
+    for (int i = 0; i < n; i++)
     {
         int num;
         cin >> num;
         arr.push_back(num);
     }
 
-    //Performing the Merge Sort 
-    mergeSort(arr,0,arr.size()-1);
+    // Performing the Merge Sort
+    mergeSort(arr, 0, arr.size() - 1);
 
-    //Printing the sorted array
-    for(int i=0;i<n;i++)
+    // Printing the sorted array
+    for (int i = 0; i < n; i++)
     {
         cout << arr[i] << " ";
     }
