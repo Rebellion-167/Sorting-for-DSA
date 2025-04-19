@@ -13,9 +13,9 @@ void recursiveSelectionSort(vector<int> &arr, int beginIndex, int size)
     {
         if(arr[i] < arr[minIndex])
             minIndex = i;
-        
-        swap(arr[beginIndex], arr[minIndex]);
-    }
+        }
+    
+    swap(arr[beginIndex], arr[minIndex]);
 
     recursiveSelectionSort(arr,beginIndex+1,size);
 }
